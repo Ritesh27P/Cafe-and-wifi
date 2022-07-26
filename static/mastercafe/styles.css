@@ -12,17 +12,39 @@ body{
     width: 100%;
 }
 
+#add-background-pic{
+    width: 100%;
+}
+
 .bar{
     z-index: 4;
     font-size: 18px;
+}
+.home-btn{
+    z-index: 5;
+    position: relative;
+    top: 10px;
+    left: 5px;
 }
 
 /* Margins */
 .margin-top{
     margin-top: 30px;
 }
+.margin-bottom{
+    margin-bottom: 30px;
+}
 .margin-20{
     margin: 20px;
+}
+.margin-40{
+    margin: 40px;
+}
+.margin-side{
+    margin: 0px 60px;
+}
+.margin-80{
+    margin: 80px;
 }
 
 .cafe-card{
@@ -32,12 +54,17 @@ body{
     border-radius: 25px;
 }
 .cafe-pic{
-    width: 200px;
-    background-color: black;
+    height: 200px;
 }
 .cafe-wifi{
     text-align: center;
 }
 .center{
+    display: flex;
+}
+.center-text{
     text-align: center;
+}
+.red{
+    background-color: red;
 }
