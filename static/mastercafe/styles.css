@@ -1,0 +1,43 @@
+body{
+    background: linear-gradient(to left top, rgb(51, 204, 255) 0%, rgb(255, 153, 153) 100%);
+    background-image: url("paper.gif");
+    background-color: #cccccc;
+}
+
+.background-pic{
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    bottom: 60px;
+    width: 100%;
+}
+
+.bar{
+    z-index: 4;
+    font-size: 18px;
+}
+
+/* Margins */
+.margin-top{
+    margin-top: 30px;
+}
+.margin-20{
+    margin: 20px;
+}
+
+.cafe-card{
+    width: 60%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+    border-radius: 25px;
+}
+.cafe-pic{
+    width: 200px;
+    background-color: black;
+}
+.cafe-wifi{
+    text-align: center;
+}
+.center{
+    text-align: center;
+}

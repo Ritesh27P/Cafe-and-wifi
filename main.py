@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -23,8 +23,23 @@ class Cafe(db.Model):
     name = db.Column(db.String(80), unique=False, nullable=False)
     address = db.Column(db.String(100), unique=True, nullable=False)
     url = db.Column(db.String(200), unique=True, nullable=True)
-    wifi_rating = db.Column(db.String(20), unique=True, nullable=False)
-    power = db.Column(db.String(20), unique=True, nullable=False)
+    wifi_rating = db.Column(db.String(20), unique=False, nullable=False)
+    power = db.Column(db.String(20), unique=False, nullable=False)
+    image = db.Column(db.String(20), unique=False, nullable=False)
 
-db.create_all()
+
+@app.route('/')
+def home():
+    cafes = Cafe.query.all()
+    return render_template('index.html', cafes=cafes)
+
+
+@app.route('/add', methods=['POST', 'GET'])
+def add():
+    return render_template('add.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    pass
 
